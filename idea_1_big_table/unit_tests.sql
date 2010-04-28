@@ -4,4 +4,8 @@ explain analyze select meas_id,data.chan_id,dt,value,min_value,max_value from da
 
 -- Grab all data that was ever on a tuesday.
 select('Tuesday data');
-select meas_id,chan_id,value from data where extract(dow from dt)=3;
+explain analyze select meas_id,chan_id,value from data where extract(dow from dt)=3;
+
+-- Just count the measurements.
+select('Count meas_id on data table');
+explain analyze select count(meas_id) from data;

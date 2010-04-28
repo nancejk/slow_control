@@ -26,3 +26,4 @@ i = data_table.insert()
 for iteration in range(1*10**int(sys.argv[1])):
   tlist = [{'value':uniform(-10,10),'chan_id':randint(1,10),'dt':td_base + timedelta(days=5*uniform(0,365))} for placeholder in range(1000)]
   i.execute(tlist)
+
