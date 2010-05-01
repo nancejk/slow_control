@@ -20,7 +20,7 @@ interface = Table('master',metadata,autoload=True)
 
 # convenience class for adding objects.
 i = interface.insert()
-for num in range(1):
-  print("working on {0}".format(num))
-  tlist = [{'value':uniform(-10,10),'chan_id':randint(1,10),'dt':td_base + timedelta(days=5*uniform(0,365))} for placeholder in range(1000)]
-  i.execute(tlist)
+for num in range(100):
+  print("working... on {0}".format(num))
+  record = [{'value':uniform(-10,10),'chan_id':1,'dt':td_base + timedelta(seconds=(num*26784 + placeholder))} for placeholder in range(26784)]
+  i.execute(record)
